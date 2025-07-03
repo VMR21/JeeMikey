@@ -495,17 +495,8 @@ async function loadLeaderboard(apiURL = CURRENT_API_URL) {
       card.className = 'css-jehefp';
       card.style.boxShadow = top3Glows[index];
       card.style.position = 'relative';
-if (index === 1) {
-  card.style.transform = 'scale(1.25)';
-  card.style.zIndex = '10'; // Optional: bring it to front
-}
-if (index === 2) {
-  card.style.transform = 'scale(0.8)';
-}
-if (index === 0) {
-  card.style.transform = 'scale(0.8)';
-}
-
+      if (index === 1) card.style.transform = 'translateY(25px) scale(1.2)';
+      if (index === 2) card.style.transform = 'translateY(25px)';
       card.innerHTML = `
         <img src="${roobetLogo}" style="width: 96px; height: auto; border-radius: 12px;">
         <div class="css-hca0vm"><span class="css-15a1lq3" style="font-weight:bold;">${username}</span></div>
